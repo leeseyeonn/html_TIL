@@ -16,3 +16,29 @@
 ### 터미널`ctrl + j` 기본 설정
 * 윈도우 기본 터미널 powershell을 git Bash로 변경하기
 * (위 gitBash는 깃 설치 후 사용 가능)
+*** git설정과 github 업로드 까지 순서 (터미널 입력기준)
+1. `git config --list` : 현재 깃 설정 정보 확인
+2. 새로운 입력창이 안 뜰땐 터미널에서 `ctrl+c` 또는 `Q`
+3. 위 1번에서 깃 설정정보에 name, email이 내 정보가 아닐 때
+4. `git config --global user.email "zzin8520@gmail.com"` 이메일 설정
+5. `git config --global user.name "leeseyeonn"` 이름 설정(메일아이디 동일)
+6. `git config --list` 위 4~5번 설정 올바르게 됐는지 확인
+---
+7. `git init` 현재 폴더를 작업 디렉터리 폴더로 연결, 폴더 경로 옆에 **master**표시 생기면 성공.
+8. `git branch -M main` 깃 디렉터리 명칭을 브랜치가 부름. 해당 브랜치명을 개인에 맞게 변경. 기본이 **main** 
+---
+9. `git add .` **.**이란 작업 수정한 모든 파일을 대기소(스테이지)에 올린다는 뜻. `git add READ.md` 
+10. `git status` 현재 스테이지 확인 명령
+11. `git commit -m "기록메세지"` 현재 올리는 파일이 어떤 내용인지 기록
+12. `git remote add origin 깃허브저장소주소` 깃허브 저장소 업로드 위치가 어디인지 주소 연결
+13. `git push origin main` 11번에서 커밋한 파일을 12번 저장소에 최종 업로드하는 명령
+### 한번만 작성하면 끝인 깃 명령어
+* `git config` 이름, 이메일 설정
+* `git init` 저장소 설정
+* `git branch -M main` 저장소 이름 설정
+* `git remote add origin` 저장소 주소 설정
+### 작업 시 깃허브 업로드를 위해 반복해야하는 깃 명령어
+* `git add`
+* `git comit -m '기록메세지'`
+* `git push origin main`
+* 필요시 중간 점검용으로 `git log` 또는  `git status` 
