@@ -39,7 +39,7 @@
 * `git remote add origin` 저장소 주소 설정
 ### 작업 시 깃허브 업로드를 위해 반복해야하는 깃 명령어
 * `git add .`
-* `git commit -m '기록메세지'`
+* `git commit -m "기록메세지"`
 * `git push origin main`
 * 필요시 중간 점검용으로 `git log` 또는  `git status` 
 # HTML 작성법
