@@ -82,3 +82,5 @@
 *  `<a href="./login.html#search"`>클릭요소</a> -> 로그인부분의 서치부분으로 이동.
 ## git 버전관리
 ### `git clone 주소 붙여넣기` 
+### gigHUB 수정된 작업물 내려받기
+* `git pull origin main
