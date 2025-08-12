@@ -38,48 +38,48 @@
                     <span class="num">-</span>
             </li>
             <li>
-                <p class="num">1</p>
+                <p class="num">2</p>
                 <div class="info" ></div>
                     <p class="img>"><img src="#" alt=""></p>
                     <div class="detail">
-                        <h3>외모지상주의</h3>
-                        <p class="author">박태준</p>
+                        <h3>유미의 세포들</h3>
+                        <p class="author">이동건</p>
                     </div>
                 <div class="status"></div>
                     <span class="arrow">-</span>
                     <span class="num">-</span>
             </li>
             <li>
-                <p class="num">1</p>
+                <p class="num">3</p>
                 <div class="info" ></div>
                     <p class="img>"><img src="#" alt=""></p>
                     <div class="detail">
-                        <h3>외모지상주의</h3>
-                        <p class="author">박태준</p>
+                        <h3>개를 낳았다</h3>
+                        <p class="author">이선</p>
                     </div>
                 <div class="status"></div>
                     <span class="arrow">-</span>
                     <span class="num">-</span>
             </li>
             <li>
-                <p class="num">1</p>
+                <p class="num">4</p>
                 <div class="info" ></div>
                     <p class="img>"><img src="#" alt=""></p>
                     <div class="detail">
-                        <h3>외모지상주의</h3>
-                        <p class="author">박태준</p>
+                        <h3>구남친이 내게 반했다</h3>
+                        <p class="author">강하다/희똑</p>
                     </div>
                 <div class="status"></div>
                     <span class="arrow">-</span>
                     <span class="num">-</span>
             </li>
             <li>
-                <p class="num">1</p>
+                <p class="num">5</p>
                 <div class="info" ></div>
                     <p class="img>"><img src="#" alt=""></p>
                     <div class="detail">
-                        <h3>외모지상주의</h3>
-                        <p class="author">박태준</p>
+                        <h3>걸어서</h3>
+                        <p class="author">이온도</p>
                     </div>
                 <div class="status"></div>
                     <span class="arrow">-</span>
@@ -151,5 +151,82 @@
             </ul>
         </li>
     </ul>
+    <hr>
+    <p>2개 이상 연속 내용 - 목록화 (li)</p>
+    <p>순서가 있으면 (ol) 없으면 (ul) 그룹목록태그</p>
+    <h2>웹접근성</h2>
+    <ul>
+        <li>이미지 사용 시 대채텍스트 alt를 사용해야한다.</li>
+        <li>동영상태그 사용 시 autoplay는 반드시 muted와 함께 해야 한다.</li>
+    </ul>
+    <hr>
+    <h1>정의형 목록태그</h1>
+    <dl><!-- 정의형 목록 그룹 -->
+        <dt>정의형 제목</dt> <!-- h1 대체금지 -->
+        <dd>정의형 내용1</dd>
+        <dd>정의형 내용2</dd>
+    </dl>
+    <hr>
+    <!-- 네이버 영한사전 -->
+    <div class="title">
+        <h2>단어•숙어</h2>
+        <p>57</p>
+    </div>
+    <dl class="Description">
+        <dt>
+            <a href="#">html</a>
+            <a href="#"><img src="#" alt="더보기"></a>
+        </dt>
+        <dd>
+            <span>약어 컴퓨터</span>
+            <p>하이퍼텍스트 기술용 언어(Hypertext Mark-up Language)</p>
+        </dd>
+        <dd>
+            <span>미국•영국</span> <!-- 여기서는 span이 인라인이라 블록이랑 같이 ㄴㄴ -->
+            <p>[ ˌeɪtʃ tiː em ˈel ]</p>
+            <span>미국식</span>
+            <p>[ ˌeɪtʃ tiː em ˈel ]</p>
+            <div><!-- 클래스 안붙음 -->
+                <a href="#"><img src="#" alt="스피커_all"></a>
+                <a href="#"><img src="#" alt="미국"></a>
+                <a href="#"><img src="#" alt="영국"></a>
+                <a href="#"><img src="#" alt="호주"></a>
+                <a href="#"><img src="#" alt="인도"></a>
+            </div>
+        </dd>
+            <a href="#">옥스퍼드 영한사전</a> <!-- dd안에 안 넣어짐 -->
+        <dd></dd>
+    </dl>
+    <!-- 네이버 영한 사전 수정 후 -->
+    <di class="dictionary_contents">
+        <dt>
+            <a href="#">HTML</a>
+            <a href="#"><img src="#" alt="단어장 저장"></a>
+        </dt>
+        <dd>
+            <strong>약어</strong>
+            <em>컴퓨터</em>
+            <span>하이퍼텍스트 기술용 언어
+                <span>Hypertext</span>
+                <span>Mark-up</span>
+                <span>Language</span>
+            </span>
+        </dd>
+        <dd class="듣기"><!-- 다른 곳과 다르게 회색박스로 묶여져 있어서 class를 추가 -->
+            <p><strong>미국•영국</strong>
+                <span>[ ˌeɪtʃ tiː em ˈel ]</span>
+                <strong>미국식</strong>
+                <span>[ ˌeɪtʃ tiː em ˈel ]</span>
+            </p>
+            <div class="coutry">
+                <a hred="#"><img src="" alt="전체발음듣기"></a>
+                <a hred="#"><img src="" alt="미국"></a>
+                <a hred="#"><img src="" alt="영국"></a>
+                <a hred="#"><img src="" alt="호주"></a>
+                <a hred="#"><img src="" alt="인도"></a>
+            </div>
+        </dd>
+        <dd><a href="#" target="_blank">옥스퍼드 영한사전</a></dd>
+    </di>
 </body>
 </html>

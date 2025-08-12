@@ -83,4 +83,4 @@
 ## git 버전관리
 ### `git clone 주소 붙여넣기` 
 ### gigHUB 수정된 작업물 내려받기
-* `git pull origin main
+* `git pull origin main`
