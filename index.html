@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>이세연 | 웹디자이너&웹퍼블리셔&프론트앤드</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- html 내부 css 작성 위치 (head안 title다음) -->
+    <style>
+        /* 선택자 { 속성:값; 속성:값; } */
+        /* div {background-color: aqua;} */
+        /* 모든 html 선택자 작성 -> 속성:값 채우기 */
+        body {background-color: #000000;}
+        #wrap {
+            background-color: #fff;
+            /* 크기 관련한 CSS : width, height. 0이 아닌 경우 단위 필수!! */
+            width:440px; height:100vh; /* vh는 뷰포트, 만약에 150vh한다면 스크롤이생기겠죠  */
+            /* 안쪽 여백 padding */
+            padding-left:15px;
+            padding-right:15px;
+        } /* wrap이 아이디니까 #대신 . 붙이면 안 됨 */
+        #wrap header {}
+        #wrap header .profile_img {}/* 안 채워놔도 중괄호 써야됨, 근데 큰 이미지(배경을 전체로 하는 이미지)는 맞출라면 width:100%; 해야 화면에 채워짐. (안튀어나온다는소리) */
+        #wrap header .profile_img image {}
+        #wrap header h1 {
+            /* 글자 굵기 regular 400기준에서 +- 100씩하면됨 */
+            font-weight:600;
+            font-family:'pretendard';
+            font-size:32px;
+            margin-top:12px;
+            margin-bottom:8px; /* 한줄 짜리니까 행간 자간 생략 */
+        }
+        #wrap header h1+h2 {
+            font-weight:400px;
+            font-size:16px;
+            font-family:'pretendard';
+            margin-bottom:10px;
+            padding-bottom:10px; /* 보더라인의 padding값을 준거임 */
+            border-bottom:1px solid #000;
+        }
+        /* main~footer */
+        /* 내가한거 */
+        /* main {} */
+        /* main > h2 {} */
+        /* main > div#block {} /* div와 #Block 붙이면 안 됨 */ */
+        /* main > div#inline {} */
+        /* footer {} */
+        /* footer > p {} */
+        /* footer > p > strong {} */
+        /* footer > p > span {} */
+        /* newwww 다시 */
+        #wrap main {}
+        #wrap main h2 {
+            font-family:'pretendard';
+            font-weight:600;
+            font-size:14px;
+            margin-bottom:10px;
+        }
+        #wrap main .block {
+            background-color: #eee;
+            padding-left:15px; padding-right:15px;
+            padding-top:10px; padding-bottom:10px;
+            /* 글자 관련한 속성 */
+            font-family:pretendard;
+            font-size:13px;
+            line-height:150%; /* 행간 */
+            color:#1D4CC3;
+            /* 블록과 인라인 요소 띄우기 */
+            margin-bottom:16px; /* 마진은 바깥쪽 여백 페딩은 안쪽여백 */
+        }
+        #wrap main .inline {
+            background-color:#eee;
+            padding-left:15px; padding-right:15px;
+            padding-top:10px; padding-bottom:10px;
+            font-family:'pretenard';
+            font-size:13px;
+            line-height:150%;
+            color:#EB721B;
+            margin-bottom:16px;
+        }
+        /* 결과보기 */
+        #wrap .result {
+            font-family:'pretendard';
+            font-weight:400;
+            font-size:14px;
+            margin-bottom:10px;
+        }
+        #wrap .result li {
+            font-family:'pretendard';
+            font-weight:400;
+            font-size:14px;
+            line-height:180%;
+        }
+        /* footer */
+        #wrap footer {}
+        #wrap footer p {}
+        #wrap footer p strong {}
+        #wrap footer p span {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <p class="profile_img"><img src="./images/profile_photo.jpg" alt=""></p>
+            <h1>이세연</h1>
+            <h2>UI/UX 프론트엔드 반응형웹디자인&웹퍼블리셔 개발 양성과정</h2>
+        </header>
+        <main>
+            <h2>HTML 공부태그</h2>
+            <div class="block">h1, h2, h3, h4, h5, h6, p, blockquote, ul, il, ol, dl, dt, dd, hr, div, header, section, aside, nav, footer, article, main, a, video</div>
+            <div class="inline">span, em, strong, br, img, a, sup, sub, code, mark, s, q, del</div>
+            <h2>작업 결과 바로가기</h2>
+            <ul class="result">
+                <li><a href="./figma_layout/leeddeok.html">🔗 이낙근 찹쌀떡</a></li> 
+                <li><a href="./figma_layout/ohou_product.html">🔗 오늘의집</a></li> 
+                <li><a href="./figma_layout/soopsori.html">🔗 숲소리</a></li> 
+            </ul>
+            <h2>과제 제출</h2>
+            <ul class="result">
+                <li><a href="./figma_layout/seongdong_school.html">✔️ 대백과사전</a></li>
+            </ul>
+        </main>
+        <footer>
+            <p>
+                <strong>이세연</strong>
+                <span>zzin8520@gmail.com</span>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
