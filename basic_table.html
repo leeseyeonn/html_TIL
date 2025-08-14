@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>표 | HTML</title>
+    <!-- 타이틀 아래 파비콘과 reset css 연결 필수 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
+    <!-- font-family 작성된 파일보다 먼저 선언 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        h1 {
+            margin-bottom:20px;
+            margin-top:20px;
+            font-weight:600;
+            font-family:'pretendard';
+        }
+        #t1 {
+            border:2px solid #000;
+            /* 테이블 폭 입력시 열은 자동으로 크기 나눠가짐. 열의 개수에 따라 값 입력하기 */
+            width: 200px;
+            /* height:100px; /* 50씩 주고싶음*2열 총 100 */
+        }
+        #t1 tr {} /* tr을 안쓰더라도 td를 써야하기때문에 써줘야한다 */
+        #t1 tr th {background-color: blue;}
+        #t1 tr td {
+            border:1px solid #f00;
+            width:100px;
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+        #t2 {/* 칸 바깥을 수정하고 싶으면 t2 */
+            border:3px solid magenta;
+            width: 400px;
+            background-color: aliceblue;
+        }
+        #t2 tr {}
+        #t2 tr th {
+            background-color: rgb(103, 216, 103);
+            border:2px solid #000;
+            padding-bottom: 30px;/* 높이값을 주는것보다 여백값을주자. 그래야 글자가 늘어나도 안 겹침 */
+            padding-top: 30px;
+            padding-left:30px;
+            padding-right:30px;
+        }
+        #t2 tr td { /* 칸 안쪽을 수정하고 싶으면 td */
+            border: 1px solid blue;
+            padding-bottom: 30px;/* 높이값을 주는것보다 여백값을주자. 그래야 글자가 늘어나도 안 겹침 */
+            padding-top: 30px;
+            padding-left:30px;
+            padding-right:30px;
+        }
+        #meeting {
+            border:2px solid #000;
+            width: 400px;
+        }
+        #meeting thead {
+            background-color: skyblue;
+        }
+        #meeting thead tr {}
+        #meeting thead tr th {}
+        #meeting tbody{
+            background-color: wheat;
+        }
+        #meeting tbody tr {}
+        #meeting tbody tr th {}
+        #meeting tbody tr td {}
+        #meeting tfoot{
+            background-color: rgb(255, 232, 104);
+        }
+        #meeting tfoot tr {}
+        #meeting tfoot tr th{}
+        #meeting tfoot tr td{}
+        /* 요금제 */
+        #plan {
+            background-color: #f9f9f9;
+            width: 1000px;
+            font-family:'pretenard', '바탕체', serif;
+            /*font-size:1.25em; /* 20px */
+        }
+        #plan thead {
+            border-top:2px solid rgb(73, 73, 73);
+            border-bottom:1px solid #ddd;
+        }
+        #plan thead tr {}
+        #plan thead tr th {
+            padding-bottom:10px;
+            padding-top:10px;
+            /*font-size:1rem; /* 16px / 1em만 했으면 적용이 안 됐는데 (이유: 이미 상단에 plan에 1.25em을 사용했으니까) rem으로 단위를 바꾸니까 적용이 됨 */
+        }
+        #plan thead tr th .company {width:100px;} /* th 있어도되고 없어도됨 */
+        #plan thead tr th span {font-size: 0.75rem;}
+        #plan tbody {}
+        #plan tbody tr {}
+        #plan tbody tr th {
+            border-bottom:1px solid #ddd;
+            text-align: left;
+        }
+        /* 수열 선택자 활용 업체 가운데 정렬 */
+        /* #plan tbody tr th:nth-child(1) {text-align:center;} */
+        #plan tbody tr th:first-child(1) {text-align:center;}
+        #plan tbody tr th em {background-color:#cfa7f8; color: white;}
+        #plan tbody tr th strong {font-size: 1.25rem;}
+        #plan tbody tr td {
+            width: 100px;
+            padding-top:10px;
+            padding-bottom:10px;
+            border-bottom:1px solid #ddd;
+            text-align: center;
+        }
+        #plan tbody tr td span {font-size: 0.75rem;}
+        #plan tbody tr td em {}
+        #plan tbody tr td .price {color:#ee239b; font-weight: 600;}
+        #plan tbody tr td .join_btn{}
+        #plan tbody tr td .select_btn{
+            background-color:#cfa7f8; color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>2행 2열 표</h1>
+    <table id="t1"><!-- 그룹역할이라서 이름이 있어야됨 -->
+        <tr>
+            <th>1열(제목)</th><!-- 저절로 자동정렬이된다. -->
+            <td>2열</td>
+        </tr>
+        <tr>
+            <td>1열</td>
+            <td>2열</td>
+        </tr>
+    </table>
+    <h1>3행 2열</h1>
+    <table id="t2">
+        <tr><!-- 1행 -->
+            <th>1열-제목</th>
+            <th>2열-제목</th>
+        </tr>
+        <tr><!-- 2행 -->
+            <td>1열</td>
+            <td>2열</td>
+        </tr>
+        <tr><!-- 3행 -->
+            <td>1열</td>
+            <td>2열</td>
+        </tr>
+    </table>
+    <h1>국회 회의록 시스템</h1>
+    <table id="meeting">
+        <!-- 행그룹->행->열(내용/제목) -->
+        <thead>
+            <tr>
+                <th>선수</th>
+                <th>출석횟수</th> <!-- 제목 그룹이니까 td는 굳이 안써도 됨 -->
+            </tr>
+        </thead>
+        <tfoot><!-- 태그의 특성으로 여기에다가 써도 순서가 바뀌지 않음 시각장애인들을 위해 먼저 위로 올려서 웹접근성을 좀더 편한하게 한거임 마크웹에선 에러남 -->
+            <tr>
+                <th>평균</th>
+                <td>99.3</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>초선</th>
+                <td>105.4</td>
+            </tr>
+            <tr>
+                <th>재선</th>
+                <td>94.4</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>요금제</h1>
+    <table id="plan">
+        <thead>
+            <tr>
+                <th class="company">업체</th>
+                <th>요금제명</th>
+                <th>데이터</th>
+                <th>음성</th>
+                <th>문자</th>
+                <th>월 정액<br><span>(부가세 포함금액)</span></th>
+                <th>상세</th>
+                <th>비교</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><!-- 1행 -->
+                <th><strong>Amobile</strong></th>
+                <th><em>추천</em><br><strong>요금폭탄방지 매일2GB</strong></th>
+                <td>11GB<br><span>(초과시 매일 2GB+3MB 속도로 무제한 이용)</span>></td>
+                <td>기본제공<br><span>(영상/부가 300분)</span></td>
+                <td>월<em class="price">20,900</em>원</td>
+                <td><a href="#" class="join_btn">가입하기</a></td>
+                <td><a href="#" class="select_btn">선택하기</a></td>
+            </tr>
+            <tr><!-- 2행 -->
+                <th><strong>Amobile</strong></th>
+                <th><em>추천</em><br><strong>A 데이터 무제한</strong></th>
+                <td>15GB<br><span>(초과시 매일 2GB+3MB 속도로 무제한 이용)</span>></td>
+                <td>기본제공<br><span>(영상/부가 300분)</span></td>
+                <td>월<em class="price">20,900</em>원</td>
+                <td><a href="#" class="join_btn">가입하기</a></td>
+                <td><a href="#" class="select_btn">선택하기</a></td>
+            </tr>
+            <tr><!-- 3행 -->
+                <th><strong>Amobile</strong></th>
+                <th><em>추천</em><br><strong>요금폭탄방지 매일2GB</strong></th>
+                <td>11GB<br><span>(초과시 매일 2GB+3MB 속도로 무제한 이용)</span>></td>
+                <td>기본제공<br><span>(영상/부가 300분)</span></td>
+                <td>월<em class="price">20,900</em>원</td>
+                <td><a href="#" class="join_btn">가입하기</a></td>
+                <td><a href="#" class="select_btn">선택하기</a></td>
+            </tr>
+            <tr><!-- 4행 -->
+                <th><strong>Amobile</strong></th>
+                <th><em>추천</em><br><strong>요금폭탄방지 매일2GB</strong></th>
+                <td>11GB<br><span>(초과시 매일 2GB+3MB 속도로 무제한 이용)</span>></td>
+                <td>기본제공<br><span>(영상/부가 300분)</span></td>
+                <td>월<em class="price">20,900</em>원</td>
+                <td><a href="#" class="join_btn">가입하기</a></td>
+                <td><a href="#" class="select_btn">선택하기</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

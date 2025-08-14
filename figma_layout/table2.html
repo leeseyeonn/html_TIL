@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>선불요금제 | KT</title>
+    <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <style>
+        #plan {width: 1110px;}
+        #plan thead {
+            background-color:#FAFAFA ;
+            border-top:2px solid #000000;
+            border-bottom:2px solid #555555;
+        }
+        #plan thead tr:nth-child(1) th {padding-top:30px; padding-bottom:30px;}
+        #plan thead tr:nth-child(2) {border-top:1px dashed #AAAAAA;}
+        /* 1행에서 위아래 합쳐졌으니까 2행 탑에 라인을 주자 */
+        /* #plan thead th:nth-child(2) {
+            padding-bottom:30px;
+            padding-top:30px;
+        } */
+        #plan thead tr:nth-child(2) th {padding-top:20px; padding-bottom:20px;}
+        #plan thead tr th {
+            font-family: 'pretendard', '맑은고딕', sans-serif;
+            font-size:1.25rem ;
+            font-weight: 600;
+        }
+        #plan thead tr:nth-child(2) th {
+            font-family: 'pretendard', '맑은고딕', sans-serif;
+            font-size:1.125rem ;
+            font-weight: 700;
+            line-height: 150%;
+        }
+        #plan thead tr th h2 {
+            font-family: 'pretendard', '맑은고딕', sans-serif;
+            font-size:1.25rem ;
+            font-weight: 600;
+            margin-bottom:12px;
+        }
+        #plan thead tr th p {
+            font-family: 'pretendard', '맑은고딕', sans-serif;
+            font-size:1rem ;
+            font-weight: 400;
+            color: #777;
+        }
+        #plan thead tr th em {
+            font-size: 0.875rem; color: #777; 
+        }
+        #plan tbody {}
+        #plan tbody tr {}
+        #plan tbody tr th {
+            font-family: 'pretednard', '맑은고딕', sans-serif;
+            font-size:1rem ;
+            font-weight: 500;
+            width: 250px;
+            padding-top: 20px;
+            padding-bottom: 20px;}
+        #plan tbody tr th td {
+            font-family:'pretendard', '맑은고딕', sans-serif;
+            font-size:1rem;
+            font-weight: 500;
+            }
+        #plan tbody tr th, 
+        #plan tbody tr td {border-bottom:1px solid #ddd;
+        font-weight: 500; text-align:center;} 
+        #plan tbody tr td span {
+            font-size:1rem ;
+            font-weight: 700;
+            color:#EE239B;
+        }
+    </style>
+</head>
+<body>
+    <h1>선불요금제</h1>
+    <table id="plan">
+        <thead>
+            <!-- 1행 -->
+            <tr>
+                <th rowspan="2"><img src="./images/phone_img.png"></th>
+                <th colspan="4"><h2>선불요금제(국제전화)</h2>
+                    <p>합리적인 선불요금제에 국제전화 혜택을 더한 알뜰한 요금제!</p></th>
+                <!-- <th>3</th>
+                <th>4</th>
+                <th>5</th> -->
+            </tr>
+            <!-- 2행 -->
+            <tr>
+                <!-- <th>1 핸드폰</th> -->
+                <th><h2>기본요금</h2>
+                    <em>(부가세 포함금액)</em></th>
+                    <!-- 인라인으로하면 마진을 겹쳐서 인식하게됨 -->
+                <th>음성</th>
+                <th>문자</th>
+                <th>데이터</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 1행 -->
+            <tr>
+                <th>국제선불 300M</th>
+                <td><span>40,700</span>원</td>
+                <td>집/이동전화 무제한(국제전화 매일 20분)</td>
+                <td>기본제공</td>
+                <td>300MB+3Mbps</td>
+            <!-- 2행 -->
+            <tr>
+                <th>국제선불 300M</th>
+                <td><span>40,700</span>원</td>
+                <td>집/이동전화 무제한(국제전화 매일 20분)</td>
+                <td>기본제공</td>
+                <td>300MB+3Mbps</td>
+            <!-- 3행 -->
+            <tr>
+                <th>국제선불 300M</th>
+                <td><span>40,700</span>원</td>
+                <td>집/이동전화 무제한(국제전화 매일 20분)</td>
+                <td>기본제공</td>
+                <td>300MB+3Mbps</td>
+        </tbody>
+    </table>
+    <!-- --------------- -->
+    <h1>행/열 합치기</h1>
+    <table id="test" style="border:1px solid #000;">
+        <tr>
+            <td colspan="2" style="border:1px solid #000;">1</td>
+            <!-- <td>2</td>, 지워야합니다 colspan="지우는 칸의 갯수" -->
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <table id="test1" style="border:1px solid #000;">
+        <tr>
+            <td>1</td>
+            <td rowspan="2" style="border:1px solid #000;">2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <!-- <td>4</td>, 열이니까 2아래 나오는 4를 없애줘야됨 -->
+        </tr>
+    </table>
+</body>
+</html>
