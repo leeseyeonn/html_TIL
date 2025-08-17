@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
-    <meta name="description" content="">.  
+    <meta name="description" content="">
     <link rel="shortcut icon" href="./images/pizza.png" type="image/x-icon">
     <title>2024 지역별 매출현황</title>
     <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
@@ -14,39 +14,53 @@
         .title_main {font-family: 'pretendard'; color: rgb(0, 0, 0);}
         #sales {
             width: 782px;
-            background-color: #f2f2f2;}
+            background-color: #f2f2f2;
+        }
         #sales thead {            
             border-top: 2px solid black;
             border-bottom: 2px solid black;
             }
         #sales thead tr {}
         #sales thead tr th {
-            padding-top: 16px;
-            padding-bottom: 16px; 
-            padding-left:16px;
             width: 150px;
+            padding-top: 16px;
+            padding-bottom: 16px;
         }
+        #sales thead tr th:first-child {padding-left:16px}
+        #sales thead tr th:last-child {padding-right:16px}
+        #sales thead tr
         #sales tbody {}
         #sales tbody tr {}
         #sales tbody tr th {
             padding-bottom: 16px;
             padding-top: 16px;
-
+            width: 150px;
         }
         #sales tbody tr td {
+            width: 150px;
             text-align: center;
+        }
+        #sales tbody tr th:first-child {padding-left:16px;}
+        #sales tbody tr td:last-child {padding-right:16px;}
+        #sales tbody tr:nth-child(4) {background:#a8d18d;}
+        #sales th:first-child {font-weight:700;}
+        .title {width:782px;}
+        .title_main {font-size: 1.25rem; font-weight:700;}
+        .detail {     
+            width: 782px;         
+            text-align: right;    
         }
     </style>
 </head>
 <body>
     <div class="title">
-        <span class="title_main">2024년 지역별 매출현황</span><span>(단위:천원)</span>
+        <span class="title_main">2024년 지역별 매출현황</span><span class="detail">(단위:천원)</span>
     </div>
     <table id="sales">
         <thead>
-            <tr>
-                <th>지역</th>
-                <th>1분기</th>
+            <tr> 
+                <th>지역</th> 
+                <th>1분기</th> 
                 <th>2분기</th>
                 <th>3분기</th>
                 <th>4분기</th>
@@ -103,6 +117,5 @@
             </tr>
         </tbody>
     </table>
-    <p><span>출처 : 행전안전부</span></p>
-</body>
+    <p><span class="detail">출처:행정안전부</span></p>
 </html>
