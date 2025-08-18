@@ -22,7 +22,7 @@ body {background-color: #222;}
 #wrap #login_frm .id_pw_group dl dd:nth-child(2) {margin:0 0 40px;} /* dd에만 쓰면 필드셋(이메일~패스워드, 폴갓)이랑 겹칠 수 있음 */
 #wrap #login_frm .id_pw_group dl dd {
     border:1px solid #aaa;
-    padding: 15px; 0;
+    padding: 15px;0;
     border-radius: 10px;
     display:block; width:100%;
 } /* 클래스를 공통으로, 그다음엔 아이디를 작성 */
@@ -36,7 +36,7 @@ body {background-color: #222;}
     color:#aaa; 
     font-size: 0.875rem; 
     } /* 공통 안내문(placeholder) 그 회색바탕인거 */
-#wrap #login_frm .id_pw_group dl dd #user_email_id {} /* 개별 */
+#wrap #login_frm .id_pw_group dl dd #user_email_id {} /* 개별--?? */ 
 #wrap #login_frm .id_pw_group dl dd #user_pw {} /* 개별 */
 #wrap #login_frm .id_pw_group .error {
     color: #FF0000;
@@ -53,7 +53,7 @@ body {background-color: #222;}
     margin:0 0 20px;
 }
 #wrap #login_frm .btn_search_group p {}
-#wrap #login_frm .btn_search_group h2+p {margin:0 0 20px;}
+#wrap #login_frm .btn_search_group h2+p {margin:0 0 20px;} /* 여기엔 글자 색을 안 칠해도 되는지 --? */
 #wrap #login_frm .btn_search_group p:nth-child(4) {margin:0 0 30px;} /* 레전드 포함해서 4번 , 왜 버튼에 마진을 안 넣나요? 버튼과 위드구글은 형제 형태가 아님. 서로 p의 외동*/
 #wrap #login_frm .btn_search_group p .btn {
     font-weight: 700;
