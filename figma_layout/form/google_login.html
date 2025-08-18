@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Login | Google</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- 웹 글꼴 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Reset -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <!-- 아래에다가 css 파일을 넣어야됨. 왜냐면 초기화되니까 -->
+    <link rel="stylesheet" href="./style/google_login.css">
+    <style>
+        /* 내부 스타일 시트(html건 공유 불가능하므로 외부연결을 권장한다) */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Welcome back</h1>
+        <p>Welcome back! Please enter your details.</p>
+        <!-- Form도 블럭요소다 | 선택, 입력 양식을 묶는 그룹 -->
+        <form action="#" method="post" id="login_frm">
+            <fieldset class="id_pw_group">
+                <!-- 레전드는 실제 보이는 글자보다는 주석처럼 쓰이는 형태 -->
+                <legend>입력양식</legend> <!-- inline 요소, 근데 눈에 안 보이니까 블럭써도되고 인라인도 써도 ㄱㅊ -->
+                <dl>
+                    <dt>Email</dt>
+                    <dd><input type="text" name="user_email_id" class="id_pw" placeholder="Enter your email or id"></dd><!-- 아이디 이메일 둘다 쓸 수 있으니까 그냥 텍스트로하자 -->
+                    <dt>Password</dt>
+                    <dd><input type="password" name="user_pw" class="id_pw" placeholder="Enter your Password"></dd>
+                </dl>
+                <p class="error">Please enter your ID</p>
+            </fieldset>
+            <fieldset class="btn_search_group">
+                <!-- 레전드는 실제 보이는 글자보다는 주석처럼 쓰이는 형태 -->
+                <legend>버튼&찾기</legend>
+                <h2>Forgot password</h2>
+                <p><button type="submit" id="login_btn" class="btn">Login</button></p> <!-- 로그인과 구글 로그인은 색만 다를 뿐 형태는 같으니까 class로 묶자  -->
+                <p><a href="http://google.com" target="_blank" id="sign_google" class="btn">Sign in with Google</a></p> <!-- 폼 관련엔 아이디랑 클래스 둘 다 주는 경우 있음  -->
+                <p class="account">Don’t have on account?<a href="#" class="sign_up" target="_blank">Sign up for free</a></p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

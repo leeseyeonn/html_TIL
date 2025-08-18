@@ -104,3 +104,16 @@
 * 16px 평균값 기준으로 피그마, 포토샵 등에서 디자인한 글자 크기를 `rem, em` 단위로 변환해서 작성한다. 
 * 16px, ==1rem or 1em
 * https://nekocalc.com/px-to-em-converter <!-- px 값을 em 단위로 변환하는 사이트 -->
+## HMTL - Form
+* 사용자 입력/선택 요소 1개라도 3등장 시 전체영역을 `form` 묶어주기 **action, method, id** 필수
+* 폼 안쪽 양식 종류가 그룹별로 2개 이상 구분될 경우 `fieldset, legend` 작성한다.
+* `fieldset` div처럼 그룹 역할이므로 id 또는 class를 함께 작성해야된다
+* `fieldset` 생략하고 대신 `div, ul,ol,dl` 등 다른 그룹으로 대체하는것도 가능하다 (그러면 레전드 쓸 일 없음)
+* `<input type="종류" name="데이터명" id="데이터명(중복x)" class="공통 디자인명">`
+* `value` 속성은 필요한 경우만 작성, 쇼핑몰 수량1 기본값 처럼.
+## css margin & padding 작성방법
+* `1px 2px 3px 4px` : 위-오-아-왼 (시계방향)
+* `1px` : 상하좌우 값 동일
+* `1px 2px` : 상하(1) 좌우(2)
+* `1px 0 2px` 상(1) 좌우(0) 하(2)
+* margin 겹침현상 주의!! 

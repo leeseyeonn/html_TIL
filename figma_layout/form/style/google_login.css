@@ -1,0 +1,80 @@
+/* 외부스타일시트 (html 공유가능) */
+/* 4 */
+body {background-color: #222;}
+#wrap {
+    background-color: #fff; width:440px; height:100vh;
+    padding:179px 15px 0; /* 100vh는 뷰포트임 페딩은 상 좌우 하 */
+    margin:0 auto;} /* w값 설정된 바깥쪽 레이아웃 요소 가운데 배치 | 가운데 보내고 싶을때 그냥 이렇게해라 가운데 정렬아니고 마진값임 */
+#wrap h1 {
+    font-weight: 900; font-size:2rem; margin: 0 0 30px;/* margin-bottom: 30px;?? */ /* 자간행간 설정안하는 이유는 리셋파일에 이미 다 설정해놨죠? */
+}
+#wrap > p {margin: 0 0 30px;/* 얘도 아무것도 안 하는 이유는 리셋에 다 설정되어있어서 */}
+/* #wrap h1+p {} 위랑 똑같은 설정자 값*/
+#wrap #login_frm {}
+/* 아이디 */
+#wrap #login_frm .id_pw_group {
+    margin:0 0 40px;
+}
+#wrap #login_frm .id_pw_group dl {}
+#wrap #login_frm .id_pw_group dl dt {
+    font-size:1.25rem; font-weight: 700; margin: 0 0 20px;
+}
+#wrap #login_frm .id_pw_group dl dd:nth-child(2) {margin:0 0 40px;} /* dd에만 쓰면 필드셋(이메일~패스워드, 폴갓)이랑 겹칠 수 있음 */
+#wrap #login_frm .id_pw_group dl dd {
+    border:1px solid #aaa;
+    padding: 15px; 0;
+    border-radius: 10px;
+    display:block; width:100%;
+} /* 클래스를 공통으로, 그다음엔 아이디를 작성 */
+#wrap #login_frm .id_pw_group dl dd .id_pw {
+    /* 입력데이터 글자 디자인 정보(실제로 치는 글자들) */
+    font-size: 0.875rem;
+    display:block; width:100%; /* dd에다가 이 값을 주면 끝까지 입력이 안 됨 중간에 짤림 글자가 */
+}
+/* 공통 */
+#wrap #login_frm .id_pw_group dl dd .id_pw::placeholder {
+    color:#aaa; 
+    font-size: 0.875rem; 
+    } /* 공통 안내문(placeholder) 그 회색바탕인거 */
+#wrap #login_frm .id_pw_group dl dd #user_email_id {} /* 개별 */
+#wrap #login_frm .id_pw_group dl dd #user_pw {} /* 개별 */
+#wrap #login_frm .id_pw_group .error {
+    color: #FF0000;
+    font-weight: 600;
+    margin:40px 0 0;
+    font-size:0.875rem;
+    /* 초반 숨기기 */
+    display:none; 
+} /* 개별 */
+/* 버튼, 가입 */
+#wrap #login_frm .btn_search_group {}
+#wrap #login_frm .btn_search_group h2 {
+    font-size:1.25rem; font-weight: 700;
+    margin:0 0 20px;
+}
+#wrap #login_frm .btn_search_group p {}
+#wrap #login_frm .btn_search_group h2+p {margin:0 0 20px;}
+#wrap #login_frm .btn_search_group p:nth-child(4) {margin:0 0 30px;} /* 레전드 포함해서 4번 , 왜 버튼에 마진을 안 넣나요? 버튼과 위드구글은 형제 형태가 아님. 서로 p의 외동*/
+#wrap #login_frm .btn_search_group p .btn {
+    font-weight: 700;
+    /* display:inline-block; */
+    display:block; width:100%; /* 왜 470이 아닌것인가? -피그마에서도 '채워'진것이기때문에 수치를 입력하지 않음. 따라서 허그 값도 쓰는건 아님. 여백으로 주는것. */
+    padding: 15px 0; /* 상하(15) 좌우(0)  가운데 정렬이라 좌우는 0임*/
+    border-radius: 10px;
+} /* a와 버튼 공통 */
+#wrap #login_frm .btn_search_group p #login_btn {
+    background-color: black; color:white;
+    /* margin-bottom: 20px; */
+} /* a와 버튼 공통 */
+#wrap #login_frm .btn_search_group p #sign_google {
+    border:1px solid #aaa;
+    text-align: center;
+}
+#wrap #login_frm .btn_search_group .account { /* 여기서 p가 안 쓰는 이유는 p에서 중복되는게 없으니까. 바로 다이렉트로 어카운트를 지명할 수 있으니까. */
+    color:#555555;
+    font-size:0.875rem;
+    text-align: center;
+}
+#wrap #login_frm .btn_search_group .account .sign_up {
+    font-weight:700; font-size:0.875rem;
+}

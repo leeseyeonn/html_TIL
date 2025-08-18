@@ -73,6 +73,13 @@
             font-weight: 700;
             color:#EE239B;
         }
+        /* git 명령어 표 그룹선택자 */
+        /* 콤마가 들어가는 순간 새로운 선택자 */
+        #git thead tr th,
+        #git tbody tr th,
+        #git tbody tr td {
+            border:1px solid #000;;
+        }
     </style>
 </head>
 <body>
@@ -144,6 +151,39 @@
             <td>3</td>
             <!-- <td>4</td>, 열이니까 2아래 나오는 4를 없애줘야됨 -->
         </tr>
+    </table>
+    <!-- ------------------------ -->
+    <hr>
+    <table id="git">
+        <thead>
+            <tr> <!-- scope 는 제목(th)에만쓸 수 있고, 수직으로 내려가는형태로 하고 싶으니까 col -->
+                <th scope="col">프로그래밍 종류</th>
+                <th scope="col">명령어</th>
+                <th scope="col">해석</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <!-- 1행 -->
+                <th rowspan="4" scope="row">git</th>
+                <th scope="row">git init</th>
+                <td>깃 폴더 경로 설정</td>
+            </tr>
+            <tr> <!-- 2행 -->
+                <!-- <th>git</th> -->
+                <th scope="row">git remote add origin</th>
+                <td>깃허브 원격저장소 연결</td>
+            </tr>
+            <tr> <!-- 3행 -->
+                <!-- <th>git</th> -->
+                <th scope="row">git status</th>
+                <td>변경상태&대기상태</td>
+            </tr>
+            <tr> <!-- 4행 -->
+                <!-- <th>git</th> -->
+                <th scope="row">git log</th>
+                <td>push로 업로드한 기록(커밋포함)</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
