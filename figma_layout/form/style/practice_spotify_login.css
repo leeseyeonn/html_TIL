@@ -1,0 +1,83 @@
+body {
+    background-color: #222;;
+}
+/* 로그인 시작 4 */
+#login_wrap {
+    width:500px;
+    margin:0 auto;
+    padding: 97px 0 0;
+}
+#login_wrap h1 {
+    text-align: center;
+    margin: 0 0 55px;
+}
+#login_wrap h1 a {} /* 이건 되고 */
+#login_wrap h1 a img {}
+/* 탭 메뉴 4 */
+#login_wrap .tap_menu {
+    text-align: center;
+    margin:0 0 55px;
+}
+#login_wrap .tap_menu a {} /* 이건 왜 되지? */
+#login_wrap .tap_menu #sign_in {margin-right: 136px;}
+#login_wrap .tap_menu #sign_up {}
+#login_wrap .tap_menu #sign_in,
+#login_wrap .tap_menu #sign_up {
+    color:#fff;
+    font-size: 1.25rem;
+}
+#login_wrap .tap_menu .active {
+    border-bottom: 3px solid #1ED760;
+    padding-bottom: 10px;
+}
+/* sign in 13 */
+#login_wrap .sign_in_contents {/* background-color: aqua; */} 
+#login_wrap .sign_in_contents #in_frm {}
+#login_wrap .sign_in_contents #in_frm .id_pw_g {}
+#login_wrap .sign_in_contents #in_frm .id_pw_g li {
+    background-color:#fff;
+    padding:25px 40px;
+    border-radius: 36.5px;
+}
+#login_wrap .sign_in_contents #in_frm .id_pw_g li:nth-child(1) {margin-bottom:14px;}
+#login_wrap .sign_in_contents #in_frm .id_pw_g li #username {}
+#login_wrap .sign_in_contents #in_frm .id_pw_g li #password {}
+#login_wrap .sign_in_contents #in_frm .id_pw_g li .username_pw {width:100%;}
+#login_wrap .sign_in_contents #in_frm .login_status {/* background-color: red; */ color:#fff; margin:31px 0;}
+#login_wrap .sign_in_contents #in_frm .login_status #login_y {margin:0 10px 0 0; display:none;}
+#login_wrap .sign_in_contents #in_frm .login_status #login_y:checked+span {
+    /* 체크박스 활성화 */
+    /* background-color: yellow; */
+    background-image: url(../images/check_on.svg);}
+#login_wrap .sign_in_contents #in_frm .login_status .chk_bg {
+    /* background-color: pink; */
+    background-image: url(../images/check_off.svg);
+    width: 24px; height: 24px;
+    background-position:left top;
+    background-repeat: no-repeat;
+    display:inline-block; /* 이거필수 */
+}
+#login_wrap .sign_in_contents #in_frm .login_status label {
+    color: #fff;
+    display:inline-block;
+    transform: translateY(-10px);
+}
+#login_wrap .sign_in_contents #in_frm .btn_forget {}
+#login_wrap .sign_in_contents #in_frm .btn_forget #sign_in_btn {
+    width:100%; height: 73px;
+    background-color: #1ED760;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 36.5px;
+    margin-bottom: 14px;
+    display: block; /* width를 100%로 했는데도 이 태그가 필요??? *->밑에도 영향을 줘서 그렇구나~!*/
+}
+#login_wrap .sign_in_contents #in_frm .btn_forget .forget_pw {
+    color: #fff;
+    width:100%;
+    display: block;
+    text-align: center;
+}
+
+/* SIGN UP 1 */
+#login_wrap .sign_up_contents {}

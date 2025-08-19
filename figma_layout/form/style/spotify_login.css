@@ -66,7 +66,7 @@ body {
     padding:25px 40px;
     border-radius: 36.5px;
 }
-#login_wrap .sign_in_contents #in_frm .id_pw_g li:nth-child(1) {margin-bottom:14px}
+#login_wrap .sign_in_contents #in_frm .id_pw_g li:nth-child(1) {margin-bottom:14px;}
 #login_wrap .sign_in_contents #in_frm .id_pw_g li .name_pw {width:100%;/* 부모만큼채워진다 */}
 #login_wrap .sign_in_contents #in_frm .id_pw_g li #user_name {}
 #login_wrap .sign_in_contents #in_frm .id_pw_g li #user_pw {}
