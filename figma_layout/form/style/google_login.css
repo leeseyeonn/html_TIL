@@ -62,7 +62,7 @@ body {background-color: #222;}
     padding: 15px 0; /* 상하(15) 좌우(0)  가운데 정렬이라 좌우는 0임*/
     border-radius: 10px;
 } /* a와 버튼 공통 */
-#wrap #login_frm .btn_search_group p #login_btn {
+#wrap #login_frm .btn_search_group p #login_btn { /* 글자가 가장 가까운 태그에 적용한다 */
     background-color: black; color:white;
     /* margin-bottom: 20px; */
 } /* a와 버튼 공통 */

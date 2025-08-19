@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify | Login</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- 폰트 활성화 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- css 초기화 -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <!-- 스포티파이 css연결 -->
+    <link rel="stylesheet" href="./style/spotify_login.css">
+</head>
+<body>
+    <main id="login_wrap">
+        <h1><a href="#"><img src="./images/spotiy_logo.svg" alt=spotify></a></h1>
+        <!-- 81 -->
+        <div class="tap_menu">
+            <a href="#" id="sign_in" class="active">SIGN IN</a> <!-- sign in&up 둘다 활성화 될 수 있으니까 class로 정한다 -->
+            <a href="#" id="sign_up">SIGN UP</a>
+        </div>
+        <!-- 55 -->
+        <!-- SIGN IN OPEN -->
+        <div class="sign_in_contents">
+            <form action="#" method="post" id="in_frm">
+                <ul class="id_pw_g">
+                    <li><input type="text" name="user_name" id="user_name" class="name_pw" placeholder="Username"></li> <!-- name은 데이터 구분용 -->
+                <!-- 14 -->
+                    <li><input type="password" name="user_pw" id="user_pw" class="name_pw" placeholder="Password"></li>
+                </ul>
+                <!-- 31 -->
+                <div class="login_status">
+                    <input type="checkbox" name="login_y_g" id="login_y"> <!-- 왜 name이 아니라 id로 연동하나?-name은 중복될수있으니까 -->
+                    <!-- 체크박스 대체용 배경이미지 적용 태그 -->
+                    <span class="chk_bg"></span>
+                    <label for="login_y">stay signed in</label> <!-- 아이디랑 라벨이랑 연동시킬려면 for 라는 태그를 쓴다. 선택요소 만들떄는 label이 필수 -->
+                </div>
+                <!-- 31 -->
+                <div class="btn_forget">
+                    <button type="submit" id="sign_in_btn">SIGN IN</button>
+                <!-- 14 -->
+                    <a href="#" class="forget_pw">Forget Password?</a>
+                </div>
+            </form>
+        </div>
+        <!-- SIGN UP OPEN -->
+        <div class="sign_up_contents"></div>
+    </main>
+</body>
+</html>
