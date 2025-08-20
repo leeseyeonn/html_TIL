@@ -113,7 +113,6 @@ body {
     /* padding:28.5px 0; 피그마에서 고정값으로 주었기때문에 height 설정값으로 하자 근데 이렇게해도 결과는 같긴 함 */
     border-radius:36.5px;
     margin-bottom: 14px;
-
 }
 #login_wrap .sign_in_contents #in_frm .btn_forget .forget_pw {
     color:#fff;

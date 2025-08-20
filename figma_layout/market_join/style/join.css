@@ -1,0 +1,183 @@
+/* 마켓컬리 회원가입 양식 */
+/* 버튼 선택자 추가하는거 확인 */
+body {background-color: #f5f5f5;}
+#wrap {
+    border: 3px solid red;
+    width: 612px; margin:0 auto; /* 기본! */
+    padding:41px 0 0;
+}
+#wrap h1 {
+    text-align: center;
+    margin: 0 0 41px;
+}
+#wrap h1 a {}
+#wrap h1 a img {}
+/* 약관 4 */
+#wrap .law {
+    background-color: #fff;
+    width: 100%; height: 200px;
+    padding: 10px;
+    overflow: auto; /* 스크롤하는 부분!! auto로 해야 가려진 부분도 다 보임 */
+    font-size: 0.75rem; /* 리셋에서 em으로 해놨기 때문 */
+    margin: 0 0 54px;
+}
+#wrap .law h2 {margin-bottom: 40px;}
+#wrap .law h3 {margin-bottom: 20px;}
+#wrap .law p {line-height: 1.5;}
+/* 폰트사이즈 묶기 */
+/* 가입양식(아이디~생년월일) */
+#wrap #join_frm {}
+#wrap #join_frm .user_info {
+    background-color: aqua;
+    overflow:hidden;
+    margin:0 0 54px;
+}
+#wrap #join_frm .user_info dt {
+    background-color: pink;
+    width: 120px;
+    float:left; clear: both;
+    /* display: inline-block; */
+}
+#wrap #join_frm .user_info dt em {
+    font-weight: 700;
+    color: #FF0000;
+}
+#wrap #join_frm .user_info dd {
+    background-color: rosybrown;
+    width:300px;
+    float: left;
+    margin:0 0 11px;
+    /* display: inline-block; */ /* 인라인블록은 어쩔수 없이 여백(마진)이 2-3px 정도 있음  */
+}
+#wrap #join_frm .user_info dd:nth-last-child(2) {margin:0;}
+#wrap #join_frm .user_info dd:nth-child(3n) {
+    background-color: red; 
+    width: 120px;
+    float: right;
+    /* display: inline-block; 얘는 줄 필요 없음. 이미 dd에 적용됐으니까 */
+}
+/* 가입양식------------------------------1~6 공통클래스 */
+#wrap #join_frm .user_info dd .input_de {
+    /* 사용자와 상호작용이 되는 기능이면 기능을 기준으로 꾸며준다 (인풋에 개인 정보를 입력하니까) */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    
+} 
+#wrap #join_frm .user_info dd .input_de::placeholder {
+    font-size: 0.875rem;
+    color: #aaa;
+}
+/* 가입양식------------------------------1. 아이디 */
+#wrap #join_frm .user_info dd #user_id {}
+#wrap #join_frm .user_info dd #id_overlap_btn {
+    background-color: #9E00B7;
+    color: #fff;
+    width: 120px; padding:10px 0;
+    text-align:center;
+    font-size: 0.875rem;
+    border-radius:5px;
+}
+/* 가입양식------------------------------2. 비밀번호 */
+#wrap #join_frm .user_info dd #user_pw {}
+/* 가입양식------------------------------3. 비밀번호 확인 */
+#wrap #join_frm .user_info dd #user_pw_chk {}
+/* 가입양식------------------------------4. 이름 */
+#wrap #join_frm .user_info dd #user_name {}
+/* 가입양식------------------------------5. 이메일 */
+#wrap #join_frm .user_info dd #user_email {}
+#wrap #join_frm .user_info dd #mail_overlap_btn {
+    background-color: #9E00B7;
+    color: #fff;
+    width: 120px; padding:10px 0;
+    text-align:center;
+    font-size: 0.875rem;
+    border-radius:5px;
+}
+/* 가입양식------------------------------6. 휴대폰 */
+#wrap #join_frm .user_info dd #agency {
+    /* background-image: url(../images/arrow_drop_down.png);
+    background-repeat:no-repeat;
+    background-position: 27px 10px; 통합버전 아래로 */
+    background:#fff url(../images/arrow_drop_down.png) no-repeat 27px 10px;
+    width:50px; padding:10px; /* hug로 되어있을땐 여백으로 셋팅한다. */
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    float: left; height: 41px;
+}
+#wrap #join_frm .user_info dd #agency option {}
+#wrap #join_frm .user_info dd #user_phone_num {width:245px; float:right;}
+#wrap #join_frm .user_info dd #certified_btn {
+    background-color: #ccc;
+    color: #fff;
+    width: 120px; padding:10px 0;
+    text-align:center;
+    font-size: 0.875rem;
+    border-radius:5px;
+}
+/* 가입양식------------------------------7. 주소 */
+#wrap #join_frm .user_info dd .adr_search {
+    background-color: #fff;
+    border: 1px solid #9E00B7;
+    width:300px; padding: 10px 0;
+    display: block;
+    text-align:center;
+    border-radius: 5px;
+    margin:0 0 10px;
+}
+#wrap #join_frm .user_info dd p {
+    color: #aaa;
+}
+/* 가입양식------------------------------8. 성별 */
+#wrap #join_frm .user_info dd:nth-child(23) {/* 가운데 정렬 */text-align: center; padding: 10px 0;}
+#wrap #join_frm .user_info dd label {}
+#wrap #join_frm .user_info dd label:nth-child(2) {/* 성별 텍스트 간격 좌우여백, 여자한테 양쪽으로 줘야 한번에끝나죠 */margin:0 30px;}
+#wrap #join_frm .user_info dd label .gender {display:none;} /* 공통 */
+#wrap #join_frm .user_info dd label .gender:checked + span {
+    /* 활성화 */
+    background-image: url(../images/radio_button_checked.png);
+
+}
+#wrap #join_frm .user_info dd label #male {}
+#wrap #join_frm .user_info dd label #female {}
+#wrap #join_frm .user_info dd label #none {}
+#wrap #join_frm .user_info dd label span {
+    /* 비활성화 */
+    /* background-color: blue; */
+    /* 여기 span 이랑 위에 활성화 스팬도 같이 있으니까 통합으로 쓰면 안됨 */
+    background-image: url(../images/radio_button_unchecked.png);
+    background-repeat: no-repeat;
+    /* background-position:0 2px; */
+    /* 백그라운드니까 태그가 아님, 마진값 ㄴㄴ, 요소사이의 값을 생각하면 안 됨 */
+    padding-left:17px; /* 버튼이 아니라 글자 기준에서 옮겨야됨! */
+    font-size: 0.875rem;
+}
+/* 가입양식------------------------------9. 생년월일 */
+#wrap #join_frm .user_info dd .birthday {width:50px; text-align:center;} /* 공통 */
+#wrap #join_frm .user_info dd:nth-child(26) {text-align:center;
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #9E00B7;/* 가로는 쓸 필요 없죠 dd에서 공통으로 넓이 300 맞췄으니까 */
+}
+#wrap #join_frm .user_info dd #user_birth_yy {}
+#wrap #join_frm .user_info dd #user_birth_mm {}
+#wrap #join_frm .user_info dd #user_birth_dd {}
+#wrap #join_frm .user_info dd > span {
+    font-size: 0.625rem;
+    color: #aaa;
+    margin: 0 15px;
+} /* span 중복이 될수 있으니까 꺽새를 이용하자 */
+/* 가입버튼 1 */
+#wrap #join_btn {
+    background-color: #9E00B7;
+    color: #fff;
+    width: 200px; height: 40px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin:54px auto 0;
+    border-radius:5px;
+    display:block; /* 행으로 떨어지니까 그냥 블록만 써도된다 */
+}
