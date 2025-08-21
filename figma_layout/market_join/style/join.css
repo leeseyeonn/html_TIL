@@ -2,7 +2,7 @@
 /* 버튼 선택자 추가하는거 확인 */
 body {background-color: #f5f5f5;}
 #wrap {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     width: 612px; margin:0 auto; /* 기본! */
     padding:41px 0 0;
 }
@@ -28,12 +28,12 @@ body {background-color: #f5f5f5;}
 /* 가입양식(아이디~생년월일) */
 #wrap #join_frm {}
 #wrap #join_frm .user_info {
-    background-color: aqua;
+    /* background-color: aqua; */
     overflow:hidden;
     margin:0 0 54px;
 }
 #wrap #join_frm .user_info dt {
-    background-color: pink;
+    /* background-color: pink; */
     width: 120px;
     float:left; clear: both;
     /* display: inline-block; */
@@ -43,7 +43,7 @@ body {background-color: #f5f5f5;}
     color: #FF0000;
 }
 #wrap #join_frm .user_info dd {
-    background-color: rosybrown;
+    /* background-color: rosybrown; */
     width:300px;
     float: left;
     margin:0 0 11px;
@@ -51,7 +51,7 @@ body {background-color: #f5f5f5;}
 }
 #wrap #join_frm .user_info dd:nth-last-child(2) {margin:0;}
 #wrap #join_frm .user_info dd:nth-child(3n) {
-    background-color: red; 
+    /* background-color: red;  */
     width: 120px;
     float: right;
     /* display: inline-block; 얘는 줄 필요 없음. 이미 dd에 적용됐으니까 */
@@ -62,15 +62,17 @@ body {background-color: #f5f5f5;}
     width: 100%;
     padding: 10px;
     border: 1px solid #aaa;
-    border-radius: 5px;
-    
+    border-radius: 5px;    
 } 
+#wrap #join_frm .btn_hover:hover {background-color: #df15ff !important;} /* 우선순위 때문에 hover 적용이 안 됨. 그러면 세미콜론 안에 !important를 넣자 */
+#wrap #join_frm .user_info dd .input_de:focus {border: 1px solid #9e00b7;}
 #wrap #join_frm .user_info dd .input_de::placeholder {
     font-size: 0.875rem;
     color: #aaa;
 }
 /* 가입양식------------------------------1. 아이디 */
-#wrap #join_frm .user_info dd #user_id {}
+#wrap #join_frm .user_info dd #user_id {}/* 
+#wrap #join_frm .user_info dd #id_overlap_btn:hover {background-color: #df15ff;} 공통으로 묶을게 */
 #wrap #join_frm .user_info dd #id_overlap_btn {
     background-color: #9E00B7;
     color: #fff;
@@ -87,6 +89,7 @@ body {background-color: #f5f5f5;}
 #wrap #join_frm .user_info dd #user_name {}
 /* 가입양식------------------------------5. 이메일 */
 #wrap #join_frm .user_info dd #user_email {}
+/* #wrap #join_frm .user_info dd #mail_overlap_btn:hover {background-color: #df15ff;} 공통으로 묶을게 */
 #wrap #join_frm .user_info dd #mail_overlap_btn {
     background-color: #9E00B7;
     color: #fff;
@@ -109,6 +112,7 @@ body {background-color: #f5f5f5;}
 }
 #wrap #join_frm .user_info dd #agency option {}
 #wrap #join_frm .user_info dd #user_phone_num {width:245px; float:right;}
+/* #wrap #join_frm .user_info dd #certified_btn:hover {background-color: #df15ff;} 공통으로 묶을게 */
 #wrap #join_frm .user_info dd #certified_btn {
     background-color: #ccc;
     color: #fff;
@@ -155,7 +159,8 @@ body {background-color: #f5f5f5;}
     font-size: 0.875rem;
 }
 /* 가입양식------------------------------9. 생년월일 */
-#wrap #join_frm .user_info dd .birthday {width:50px; text-align:center;} /* 공통 */
+#wrap #join_frm .user_info dd .birthday {width:50px; text-align:center; border: 1px solid #fff; /* 흰색으로 테두리 준 이유는 focus했을때 크기변화가 나타나지 않도록 */ } /* 공통 */
+#wrap #join_frm .user_info dd .birthday:focus {border: 1px solid#9e00b7;}
 #wrap #join_frm .user_info dd:nth-child(26) {text-align:center;
     background-color: #fff;
     padding: 10px 0;
@@ -171,6 +176,7 @@ body {background-color: #f5f5f5;}
     margin: 0 15px;
 } /* span 중복이 될수 있으니까 꺽새를 이용하자 */
 /* 가입버튼 1 */
+/* #wrap #join_btn:hover {background-color: #df15ff;} 공통으로 묶을게 */
 #wrap #join_btn {
     background-color: #9E00B7;
     color: #fff;

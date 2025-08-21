@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>CSS 통합연습</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body{background: #40c9ff;
+            background: linear-gradient(90deg, rgba(64, 201, 255, 1) 0%, rgba(105, 255, 160, 1) 50%, rgba(255, 239, 120, 1) 100%);}
+        body *::selection { background-color:yellow; color:rgb(134, 46, 46),100; }
+        #wrap {}
+        #wrap h1 {color: red;}
+        #wrap h1:nth-child(3) {color: darkgoldenrod; clear: both;}
+        #wrap h1:nth-of-type(2), 
+        #wrap h1:nth-of-type(1) {font-size: 2rem;}
+        #wrap .list {/* #wrap ul {} 똑같은 선택자 네이밍 */
+        background-color: rgb(182, 182, 182);}
+        #wrap .list li {
+            float:left;
+        }
+        #wrap .list:nth-child(2) {border: 2px solid violet;}
+        #wrap .list:nth-of-type(2) /* '리스트'중에 둘째 */ {border: 2px solid darkblue;}
+        #wrap .list:nth-child(2) li:nth-child(1) {background-color: yellow;}
+        #wrap .list:nth-of-type(1) li:nth-child(1) {background-color: orange;}
+        #wrap .list:first-of-type li:first-child {background-color: darkmagenta;}
+        #wrap .list:nth-child(2) /* = .list:first-of-type */ li:nth-child(4) {background-color: palevioletred;}
+        #wrap .list:nth-child(4) li:nth-child(4) a {background-color: coral;}
+        #wrap .list li a {font-size: 1.5rem;}
+        #wrap .list:nth-child(4) li a {background-color: rgb(0, 85, 195);}
+        #wrap .list li:nth-child(even) {border-bottom: 5px solid rgb(66, 139, 59);}
+        #wrap .list li:nth-child(odd) {border-bottom: 5px solid rgb(0, 149, 218);}
+        #wrap .list:last-child li:nth-child(3n+1) {background-color: darkslateblue;}
+        section {background-color: black;
+            clear: both;}
+        section > * {
+            font-size: 3rem;
+            font-size: 3rem; margin:4px;
+            background-color: indianred;
+        } /* *은 모든 자식 선택자 */
+        section #btn:hover {background: red;}
+        /* section #btn,section .link1 {font-size: 3rem;} */
+        section .link1:hover {background-color: olive;}
+        section input {border: 3px solid white}
+        section input:focus {border: 3px solid rgb(73, 92, 46); color: rgb(60, 23, 160);} /* 포커스란 커서 기준으로 바뀌는 것 */
+        /* 가상선택자 before, after */
+        article {}
+        article a:nth-child(2) {background-color: rgb(184, 184, 184);}
+        article a:nth-child(2)::before {
+            content: '';
+            display: inline-block;
+            width: 1px; height: 6px;
+            background-color: red;
+            margin: 0 4px;
+        } /* 두번째 A에다가 수정하고싶으니까 떼면 안 됨 */
+        article a:nth-child(2)::after {
+            content: '';
+            display: inline-block;
+            width: 2px; height: 15px;
+            background-color: red;
+            margin: 0 4px;
+        }
+        .mobile {
+            width: 430px; height: 923px;
+            margin: 100px auto;
+            background:url(https://i.pinimg.com/736x/3c/3a/b1/3c3ab1976dcf8d1718d0dc72a29bdbeb.jpg) center / cover;
+        }
+        .mobile::after {
+            content: ''; display: block;
+            width:100%; height: 100%; /* 부모 모두채우기 */
+            /* background-color: rgb(255, 0, 0); */
+            background: linear-gradient(rgb(235, 185, 255,0.5),rgba(182, 224, 42, 0.5)); 
+        }
+        /* 쇼핑몰 검색 필터 */
+        #search_frm {}
+        #search_frm #user_name {}
+        #search_frm #user_size {}
+        #search_frm #user_color {}
+        #search_frm #search {}
+        /* 속성 선택자 ^(시작) $(끝) *(포함) */
+        #search_frm input[type=text] {background-color: plum;}
+        #search_frm input[type^=te] {background-color: darkmagenta;}
+        #search_frm input[name^=user] {background-color: cadetblue;}
+        #search_frm input[type$=xt] {background-color: red;}
+        #search_frm input[name*=r_] {background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>CSS 공부</h1>
+        <ul class="list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+        <h1>CSS 공부</h1>
+        <ul class="list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+        </ul>
+    </div>
+    <section>
+        <button type="button" id="btn">확인</button>
+        <a href="#" class="link1">바로가기</a>
+        <input type="text" placeholder="아이디입력">
+    </section>
+    <article>
+        <a href="#">아이디 찾기</a>
+        <a href="#">비밀번호 찾기</a>
+        <a href="#">회원가입</a>
+    </article>
+    <div class="mobile"></div>
+    <!-- 쇼핑몰 검색필터 -->
+    <form action="#" method="get" id="search_frm">
+        <input type="text" name="user_name" id="user_name" placeholder="상품명">
+        <input type="text" name="user_size" id="user_size" placeholder="사이즈">
+        <input type="text" name="user_color" id="user_color" placeholder="색상">
+        <button type="button" id="search">검색</button>
+    </form>
+</body>
+</html>
