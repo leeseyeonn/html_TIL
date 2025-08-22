@@ -1,0 +1,82 @@
+/* ------------------------------------sns */
+#wrap .sns {
+    text-align: center;
+    margin:14px 0 0;
+}
+#wrap .sns a:nth-child(2) {margin: 0 20px;}
+#wrap .sns a {}
+#wrap .sns a img {}
+#wrap #join_frm {}
+/* ------------------------------------가입정보 입력 */
+#wrap #join_frm .contents {/* border: 2px solid palevioletred; */}
+#wrap #join_frm .contents .info {}
+#wrap #join_frm .contents .info dt {
+    font-size: 1.063rem; font-weight: 500; margin: 22px 0 10px;}
+#wrap #join_frm .contents .info dt:first-child {margin-top: 0;}
+#wrap #join_frm .contents .info dd {clear: both; overflow: hidden; 
+    font-size: 0.875rem; color: #777;}
+#wrap #join_frm .contents .info dt+dd {/* border: 2px solid orange; */ margin:0 0 10px;}
+#wrap #join_frm .contents .info dd input[name^=user] {/* 공통 */
+    width:100%; height: 36px;
+    padding-left: 10px; border: 1px solid #ddd;
+    border-radius: 3px;
+    float: left;
+} 
+/* #wrap #join_frm .contents .info dd input {} */
+#wrap #join_frm .contents .info dd #user_email {width: 190px;}
+#wrap #join_frm .contents .info dd span {
+    color: #777; float: left; margin-left: 6px; transform:translateY(10px);}
+/* #wrap #join_frm .contents .info dd .email_adr_select {} */
+#wrap #join_frm .contents .info dd select[name*=adr] {
+    float:right;
+    background: #Fff url(../images/arrow_forward_ios.png) no-repeat 95% center;
+    border:1px solid #ddd; padding:10px; border-radius: 3px; width: 190px;
+}
+#wrap #join_frm .contents .info dd select[name*=adr] option {background-color: ;}
+#wrap #join_frm .contents .info dd #email_certified_btn {
+    width: 100%; padding:10px 0;
+    border-radius: 3px;
+    background-color: #F5F5F5;
+    float:right;
+}
+#wrap #join_frm .contents .info dd #user_pw {width:100%; }
+#wrap #join_frm .contents .info dd #user_pw_re {width:100%; }
+#wrap #join_frm .contents .info dd #user_nick {width:100%; }
+/* ------------------------------------약관동의 */
+#wrap #join_frm .law {margin: 22px 0 0;}
+#wrap #join_frm .law dl {/* border:1px solid rgb(255, 201, 201); */}
+#wrap #join_frm .law dl dt {font-size: 1.063rem; font-weight: 500; margin:0 0 10px;}
+/* #wrap #join_frm .law dl dt ul {} */
+#wrap #join_frm .law dl dd ul {padding: 10px;}
+#wrap #join_frm .law dl dd ul li {}
+/* --------------------------전체동의 1행 */
+#wrap #join_frm .law dl dd ul li:first-child { padding-bottom:5px; border-bottom:1px solid #eee; }
+#wrap #join_frm .law dl dd ul li:first-child #all {}
+#wrap #join_frm .law dl dd ul li:first-child label {font-weight: 600;}
+#wrap #join_frm .law dl dd ul li:first-child label em {font-size: 0.875rem; color: #777;}
+/* --------------------------개별 동의 2~6행 통합 */
+#wrap #join_frm .law dl dd ul li:nth-child(2),
+#wrap #join_frm .law dl dd ul li:nth-child(3),
+#wrap #join_frm .law dl dd ul li:nth-child(4),
+#wrap #join_frm .law dl dd ul li:nth-child(5),
+#wrap #join_frm .law dl dd ul li:nth-child(6) {margin-top: 10px;}
+#wrap #join_frm .law dl dd ul li input[name*=agree] {display:none;}
+#wrap #join_frm .law dl dd ul li input[name*=agree]:checked + label {background-image: url(../images/check_box_y.png)}
+#wrap #join_frm .law dl dd ul li label {
+    font-size: 0.813rem;
+    background-image: url(../images/check_box_n.png);
+    background-repeat: no-repeat;
+    padding-left: 27px; 
+    line-height: 24px; display: inline-block;
+}
+#wrap #join_frm .law dl ul li label em {}
+#wrap #join_frm .law dl ul li label .essential {font-size:0.813rem; color:#777;}
+#wrap #join_frm .law dl ul li label .choice {font-size:0.75rem; color:#777;}
+#wrap #join_frm .law dl ul li .more {}
+#wrap #join_frm .law dl ul li .more img {float: right;}
+/* ------------------------------------버튼~마지막 */
+#wrap #join_frm #login_btn {margin:22px 0;}
+#wrap #join_frm p:last-child {font-size:0.875rem; text-align: center; padding-bottom: 30px;}
+#wrap #join_frm p:last-child a {
+    font-size:0.875rem; 
+    font-weight:600; text-decoration: underline;}

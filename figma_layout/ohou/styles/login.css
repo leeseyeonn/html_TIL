@@ -1,0 +1,20 @@
+#wrap .sns {
+    text-align: center;
+    margin:14px 0 0;
+}
+#wrap .sns a:nth-child(2) {margin: 0 20px;}
+#wrap .sns a {}
+#wrap .sns a img {}
+#wrap #login_frm {}
+#wrap #login_frm .info {}
+#wrap #login_frm .info dt {font-size: 1.063rem; font-weight:500; margin-bottom: 10px;}
+#wrap #login_frm .info dd {margin: 0 0 22px;}
+/* #wrap #login_frm .info dt:nth-child(3) {margin-top:22px;} */
+#wrap #login_frm .info dd input[name^=user] {
+    padding: 10px; width: 100%; border-radius: 3px; border: 1px solid #ddd;}
+#wrap #login_frm .info dd #user_id {}
+#wrap #login_frm .info dd #user_pw {}
+#wrap #login_frm #login_btn {margin: 0 0 22px;}
+#wrap #login_frm > p {font-size: 0.875rem; text-align: center;}
+#wrap #login_frm > p a {font-weight: 600; text-decoration-line: underline;} 
+/* 언더라인 속성은 색상 변경 불가, 여백 설정 불가 */
