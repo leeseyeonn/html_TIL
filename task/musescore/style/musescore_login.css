@@ -1,2 +1,15 @@
-#wrap
-#wrap h1 
+#wrap {}
+#wrap h1 {}
+#wrap span {}
+#wrap > a {}
+#wrap em {}
+#wrap .sns_login {}
+#wrap .sns_login a {}
+#wrap #id_pw {}
+#wrap #id_pw .info {}
+#wrap #id_pw .info dt {}
+#wrap #id_pw .info dl {}
+#wrap #id_pw .info dl .id_pw_g {}
+#wrap #id_pw .info dl #user_id {}
+#wrap #id_pw .info dl #user_pw {}
+#wrap #login {}
