@@ -16,27 +16,31 @@
     <div id="wrap">
         <!-- 로그인 안내 -->
         <h1>Log in to Musescore</h1>
-        <span>Don't have an account?<a href="#"><em>Sign Up</em></a></span>
+        <span>Don't have an account? <a href="#"><em>Sign Up</em></a></span>
         <!-- sns로그인 -->
         <section class="sns_login">
-            <a href="#"><img src="./google_login.png" alt="구글로 로그인하기"></a>
-            <a href="#"><img src="https://musescore.com/static/public/musescore/img/fb-login.svg" alt="페이스북 로그인하기"></a>
-            <a href="#"><img src="https://musescore.com/static/public/musescore/img/apple-login.svg" alt="애플 로그인하기"></a>
+            <a href="#" class="google"><img src="./google_login.png" alt="구글로 로그인하기">Continue with Google</a>
+            <a href="#" class="facebook"><img src="https://musescore.com/static/public/musescore/img/fb-login.svg" alt="페이스북 로그인하기"></a>
+            <a href="#" class="apple"><img src="https://musescore.com/static/public/musescore/img/apple-login.svg" alt="애플 로그인하기"></a>
         </section>
         <!------------------------ 구분선---------------- -->
+        <div class="line">
+            <p>or</p>
+        </div>
         <form action="#" method="post" id="id_pw">
             <!-- 정보 입력하기 -->
             <dl class="info">
                 <!-- 아이디 입력 -->
                 <dt>Email or username</dt>
-                <dl><input type="text" name="user_id" id="user_id" class="id_pw_g"></dl>
+                <dd><input type="text" name="user_id" id="user_id" class="id_pw_g"></dd>
                 <!-- 비밀번호 입력 -->
                 <dt>Password</dt>
-                <dl><input type="password" name="user_pw" id="user_pw" class="id_pw_d"></dl>
+                <dt><a href="#">Forgot your password?</a></dt>
+                <dd><input type="password" name="user_pw" id="user_pw" class="id_pw_d"></dd>
             </dl>
+            <!-- 로그인 버튼 누르기 -->
+            <button type="submit" id="login">Log in</button>
         </form>
-        <!-- 로그인 버튼 누르기 -->
-        <button type="submit" id="login">Log in</button>
     </div>
 </body>
 </html>

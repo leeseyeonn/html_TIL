@@ -1,15 +1,50 @@
-#wrap {}
-#wrap h1 {}
-#wrap span {}
+#wrap {width:320px; margin:0 auto; padding-top:150px; /* background-color: rgb(192, 255, 255); */}
+#wrap h1 {
+    font-weight: 700; text-align: center; color:#18003B;
+    font-size: 2rem; letter-spacing:-2px; margin-bottom: 10px;}
+#wrap span {display:block; text-align:center; color: #777; margin-bottom: 24px;}
 #wrap > a {}
-#wrap em {}
-#wrap .sns_login {}
+#wrap em {color: #6B5DFE;}
+#wrap .line {text-align: center; margin-top: -12px}
+#wrap .line p {
+    color:#18003B; background-color: #fff;
+    padding: 5px; display:inline-block;
+    text-align: center; position: relative;
+    }
+#wrap .sns_login {/* background-color: rgb(176, 255, 210); */ padding-bottom: 40px; /* 눈대중으로 함 수정 필요 */ border-bottom: 1px solid #777 ;}
 #wrap .sns_login a {}
-#wrap #id_pw {}
-#wrap #id_pw .info {}
-#wrap #id_pw .info dt {}
-#wrap #id_pw .info dl {}
+#wrap .sns_login a.google:hover {
+    background-color: #5848d4;}
+#wrap .sns_login a.google {
+    color:#fff; background-color:#6B5DFE;
+    font-size: 0.875rem;
+    border: 1px solid #6254E9;
+    width: 200px; height: 40px;
+    border-radius: 20px;
+    display: inline-block;}
+#wrap .sns_login a.google img {width: 33px; height: 33px;
+    vertical-align: middle;
+    margin-right: 11px;
+    margin:3px 11px 3px 3px;}
+#wrap .sns_login a:nth-child(2),
+#wrap .sns_login a:nth-child(3) {width:48px; height: 40px;
+    border:1px solid #C5C5C5; border-radius: 15px; background-color: #fff;
+    display: inline-block;}
+#wrap .sns_login a.facebook img,
+#wrap .sns_login a.apple img {width: 32px; height: 32px; margin: 4px 0 0 6px; /* 마진부분 잘 모르겠음 */
+    vertical-align: middle;
+    /* margin-top: 3px; margin-left:6px; margin-bottom:4px; */}
+#wrap #id_pw {/* border: 5px solid salmon; */}
+#wrap #id_pw .info {/* border: 1px solid black; */}
+#wrap #id_pw .info dt:first-child {margin-top: 24px;}
+#wrap #id_pw .info dt {color:#18003B; font-size: 0.875rem; margin-bottom: 5px;}
+#wrap #id_pw .info dd {margin-bottom: 24px;}
+#wrap #id_pw .info dd input {color:#6B5DFE;  padding: 16px; width: 100%; border: 1px solid #d5d5d5;}
 #wrap #id_pw .info dl .id_pw_g {}
+#wrap #id_pw .info dt:nth-of-type(2) {float:left;}
+#wrap #id_pw .info dt:nth-of-type(3) {float:right;}
+#wrap #id_pw .info dt:nth-of-type(3) a {color:#6B5DFE;}
 #wrap #id_pw .info dl #user_id {}
 #wrap #id_pw .info dl #user_pw {}
-#wrap #login {}
+#wrap #id_pw #login{background-color: #E7E5E8; width: 100%;
+    font-size: 0.875rem; color:#777; padding:12px; border-radius:20px; margin-bottom: 24px;} 

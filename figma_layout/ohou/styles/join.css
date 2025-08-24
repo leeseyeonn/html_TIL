@@ -32,7 +32,7 @@
     background: #Fff url(../images/arrow_forward_ios.png) no-repeat 95% center;
     border:1px solid #ddd; padding:10px; border-radius: 3px; width: 190px;
 }
-#wrap #join_frm .contents .info dd select[name*=adr] option {background-color: ;}
+#wrap #join_frm .contents .info dd select[name*=adr] option {background-color: #Fff;}
 #wrap #join_frm .contents .info dd #email_certified_btn {
     width: 100%; padding:10px 0;
     border-radius: 3px;
