@@ -1,0 +1,65 @@
+/* css 변수 */
+:root {
+    /* --대상-용도:반복속성값; */
+    /* 글자크기 */
+    --text-title70:4.375rem;
+    --text-contents21:1.313rem;
+    --text-menu18:1.125rem;
+    --text-sub12:0.75rem;
+    /* 행간 */
+    --line-title90:90%;
+    --line-contents150:150%;
+    --line-menu100:100%;
+    --line-sub100:100%;
+    /* 자간 */
+    --letter-title2:-0.02rem;
+    --letter-contents2:-0.02rem;
+    --letter-menu0:0%;
+    --letter-sub0:0%;
+    /* 굵기 */
+    --weight-title:700;
+    --weight-contents:400;
+    --weight-menu:400;
+    --weight-sub:400;
+    /* 색상 */
+    --color-white:#fff;
+    --color-gray4:#444;
+    --color-graya:#aaa;
+    --color-title_brown:#642c10;
+    --color-title_indigo:#1d356d;
+    --color-title_coral:#d43936;
+    /* 레이아웃 정보 */
+    --width-desktop:1440px;
+    --margin-desktop_l_r_80:80px;
+}
+/* header 포함 공통 */
+#wrap {}
+#wrap  header {
+    background-color: skyblue; /* width: 100%; 기본값 */ padding: 0 80px;
+    height: 92px;
+    /* 메인축 수평, 줄바꿈 안 함 */
+    display: flex; flex-flow: row nowrap;
+    /* 메인축 정렬 (양쪽 끝) */
+    justify-content: space-between; 
+    /* 교차축(수직) 가운데  */
+    align-items: center;}
+#wrap  header h1 {}
+#wrap  header h1 a {font-size:var(--text-menu18)}
+#wrap  header h1 a .img {}
+#wrap  header nav {background-color: lime; }
+#wrap  header nav .gnb {
+    display: flex; /* 자식 li 정렬 위한 값 */ flex-flow:row nowrap; gap:70px;
+}
+#wrap  header nav .gnb > li {}
+#wrap  header nav .gnb > li > a {font-size:var(--text-menu18);
+    background-color: rgb(150, 46, 81); 
+    display: block; line-height: 92px;/* 행간을 주는 것 */ }
+#wrap  header .right_menu {background-color: yellow; display: flex; flex-flow:row nowrap; gap:40px;}
+#wrap  header .right_menu > li {}
+#wrap  header .right_menu > li:nth-child(1) {display: flex; flex-flow:row nowrap; align-self: center;}
+#wrap  header .right_menu > li:nth-child(1)::after {
+    content:''; display: block; width: 1px; height: 13px; 
+    background-color: var(--color-gray4); margin-left:40px;
+}
+#wrap  header .right_menu > li > a {font-size: var(--text-sub12);}
+#wrap  header .right_menu > li > a img {}
